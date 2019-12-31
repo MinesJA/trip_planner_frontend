@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Grid, Button } from 'semantic-ui-react';
+import { Grid } from 'semantic-ui-react';
 
 const unclickedStyle = {
   backgroundColor: 'transparent',

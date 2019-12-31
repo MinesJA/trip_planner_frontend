@@ -11,7 +11,20 @@ export class DayObject{
   }
 
   setType(type){
-    if(type =)
+    // Will need to establish rules on which types can switch
+    // switch(type) {
+    //   case VACATION:
+    //     // code block
+    //     break;
+    //   case HOLIDAY:
+    //
+    //     break;
+    //   case REGULAR:
+    //     // code block
+    //     break;
+    //   default:
+    // }
+
     this.type = type
   }
 
@@ -29,16 +42,7 @@ let holidays = {
 }
 
 
-Holiday	2019	2020	2021
-New Years Day January 1
-Martin Luther King, Jr. Day January 20
-Washington's Birthday February 17
-Good Friday	April 10
-Memorial Day May 25
-Independence Day July 3
-Labor Day	September 7
-Thanksgiving Day November 26
-Christmas	December 25
+
 
 function getDaysInMonth(month, year, holidays) {
      var date = new Date(Date.UTC(year, month, 1));

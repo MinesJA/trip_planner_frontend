@@ -1,0 +1,12 @@
+{
+  "holidays": [
+    { "id": 1, "name": "New Years Day January", "date": "1/1/2020" },
+    { "id": 2, "name": "Martin Luther King, Jr. Day", "date": "1/20/2020" },
+    { "id": 3, "name": "Washington's Birthday", "date": "2/17/2020" },
+    { "id": 4, "name": "Good Friday", "date": "4/10/2020" },
+    { "id": 5, "name": "Memorial Day", "date": "5/25/2020" },
+    { "id": 6, "name": "Independence Day", "date": "7/03/2020" },
+    { "id": 7, "name": "Labor Day", "date": "9/07/2020" },
+    { "id": 8, "name": "Christmas", "date": "12/25/2020" }
+  ]
+}

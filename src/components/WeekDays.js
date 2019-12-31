@@ -1,10 +1,20 @@
 import React from 'react';
 import { Header, Grid } from 'semantic-ui-react';
 
-function WeekDays({weekDays}){
+const WEEKDAYS = [
+  "S",
+  "M",
+  "T",
+  "W",
+  "T",
+  "F",
+  "S"
+]
+
+function WeekDays(){
     return (
       <Grid.Row>
-        {weekDays.map(weekDay => <Grid.Column><Header>{weekDay}</Header></Grid.Column>)}
+        {WEEKDAYS.map(weekDay => <Grid.Column><Header>{weekDay}</Header></Grid.Column>)}
       </Grid.Row>
     )
 }

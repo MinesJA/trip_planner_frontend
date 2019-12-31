@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import WeekDays from './WeekDays';
 import NumberedDays from './NumberedDays';
-import { List, Container, Header, Grid } from 'semantic-ui-react';
+import { Container, Header, Grid } from 'semantic-ui-react';
 
 const containerStyle = {
   margin: '20px',
@@ -12,28 +12,34 @@ const containerStyle = {
 
 const headerStyle = {
   margin: '10px'
-}
-
-const listStyle = {
-  width: '100%'
-}
-
-const listItemStyle = {
-  textAlign: 'justify'
-}
-
+};
 
 function Month({name}) {
+  const [weekDays, setWeekDays] = useState([]);
 
-  let weekDays = [
-    'S',
-    'M',
-    'T',
-    'W',
-    'T',
-    'F',
-    'S'
-  ]
+  // () => {
+  // async function fetchData() {
+  //   // You can await here
+  //   const response = await MyAPI.getData(someId);
+  //   // ...
+  // }
+
+  // useEffect(() => {
+  //   async function fetchData(){
+  //     fetch(WEEKDAYS_URL)
+  //       .then(res => res.json())
+  //       .then(setWeekDays)
+  //     }
+  //     fetchData()
+  //   },[weekDays]
+  // )
+
+  // useEffect(() => {
+  //   fetch(WEEKDAYS_URL)
+  //       .then(res => res.json())
+  //       .then(setWeekDays)
+  //   },[weekDays]
+  // )
 
   let days = Array.from(Array(7).keys())
   let weeks = Array.from(Array(5).keys())
@@ -42,7 +48,7 @@ function Month({name}) {
     <Container style={containerStyle}>
       <Header style={headerStyle}>{name}</Header>
       <Grid columns={7}>
-        <WeekDays weekDays={weekDays}/>
+        <WeekDays />
         <NumberedDays weeks={weeks} days={days}/>
       </Grid>
     </Container>
