@@ -1,25 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Month from './components/Month.js';
+import { Grid } from 'semantic-ui-react';
+
+
+const gridStyle = {
+  margin: '40px',
+  border: '5px solid pink'
+};
 
 function App() {
+
+  let months = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December'
+  ]
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Grid columns={4} centered divided style={gridStyle}>
+      {months.map(month => <Month key={month} name={month} />)}
+    </Grid>
   );
 }
 
